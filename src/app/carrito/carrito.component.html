@@ -1,0 +1,7 @@
+<h2>Lista de Compras</h2>
+
+<ul>
+  <li *ngFor="let m of listaDeCompras$ | async">
+    {{m.variedad}}: {{m.cantidad}}
+  </li>
+</ul>

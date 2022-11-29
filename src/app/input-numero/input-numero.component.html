@@ -1,0 +1,9 @@
+<div class="input-group">
+  <div class="input-group-prepend">
+    <button class="badge bg-secondary" (click)="downCantidad()">-</button>
+  </div>
+  <input type="text" class="text-center" class="input-numero" [(ngModel)]="cantidad"  (keypress)="soloNumerosEnInput ($event)" (focusout)="verificoCantidad ($event)">
+<div class="input-group-prepend">
+  <button class="badge bg-secondary" (click)="upCantidad()">+</button>
+</div>
+</div>
