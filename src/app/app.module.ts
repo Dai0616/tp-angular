@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MilanesasListComponent } from './milanesas-list/milanesas-list.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 import { FormsModule   } from '@angular/forms';
 import { TiendaMilanesasComponent } from './tienda-milanesas/tienda-milanesas.component';
 import { TiendaNosotrosComponent } from './tienda-nosotros/tienda-nosotros.component';
@@ -22,7 +24,8 @@ import { InputNumeroComponent } from './input-numero/input-numero.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

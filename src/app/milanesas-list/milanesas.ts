@@ -1,8 +1,8 @@
 export interface Milanesa {
+  imagen: string;
   variedad: string;
   precio: number;
   stock: number;
-  imagen: string;
   oferta: boolean;
   cantidad: number;
 }
