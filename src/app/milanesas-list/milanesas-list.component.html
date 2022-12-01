@@ -1,17 +1,17 @@
-<table class="table text-center">
+<table class="table table-hover text-center">
   <thead>
     <tr>
       <th>Imagen</th>
       <th>Variedad</th>
       <th>Precio</th>
-      <th>Stock</th>
+      <th></th>
       <th>Cantidad</th>
       <th>Compra</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let milanesa of milanesas" [ngClass]="{'oferta': milanesa.oferta}">
-      <td><img [src]="milanesa.imagen" [alt]="milanesa.variedad" width="100"></td>
+      <td><img [src]="milanesa.imagen" [alt]="milanesa.variedad"></td>
       <td>{{milanesa.variedad}}</td>
       <td>{{milanesa.precio | currency}}</td>
       <td><span class="badge text-bg-secondary" *ngIf="milanesa.stock==0">Sin stock</span></td>
