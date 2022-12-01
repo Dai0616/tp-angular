@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Milanesa } from './milanesas-list/milanesas';
 
 @Injectable({
@@ -9,9 +9,8 @@ import { Milanesa } from './milanesas-list/milanesas';
 export class MilanesaCarritoService {
 
   private _listaDeCompras: Milanesa[] = [];
-
   listaDeCompras: BehaviorSubject<Milanesa[]> = new BehaviorSubject(this._listaDeCompras);
-
+  public milanesas: Observable<Milanesa[]> = this.listaDeCompras.asObservable();
 
   constructor() { }
 
@@ -22,7 +21,6 @@ export class MilanesaCarritoService {
     } else {
       item.cantidad += milanesa.cantidad;
     }
-    console.log (this._listaDeCompras);
     this.listaDeCompras.next (this._listaDeCompras);
   }
 

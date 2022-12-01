@@ -25,11 +25,12 @@ export class MilanesasListComponent implements OnInit {
   }
 
   agregarAlCarrito (milanesa: any): void {
+    if (milanesa.cantidad !=0){
     this.carrito.agregarAlCarrito (milanesa);
     milanesa.stock -= milanesa.cantidad;
     milanesa.cantidad = 0;
   }
-
+}
   valorMaximo(m: string) {
     alert (m);
   }
