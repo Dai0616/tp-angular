@@ -24,4 +24,9 @@ export class MilanesaCarritoService {
     this.listaDeCompras.next (this._listaDeCompras);
   }
 
+  limpiarCarrito(){
+    this._listaDeCompras= [];
+    this.listaDeCompras.next (this._listaDeCompras);
+  }
+
 }

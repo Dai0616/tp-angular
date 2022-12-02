@@ -27,4 +27,9 @@ export class CarritoComponent implements OnInit {
     });
     return suma;
   }
+
+  vaciarCarrito(): void {
+    this.total();
+    this.carrito.limpiarCarrito();
+  }
 }
